@@ -12,7 +12,8 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
-app.use("/api/users", users);
+// prefisso API corretto
+app.use("/api", users);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
